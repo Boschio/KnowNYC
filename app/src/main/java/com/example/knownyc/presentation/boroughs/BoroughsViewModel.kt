@@ -6,9 +6,10 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @HiltViewModel
-class BoroughsViewModel constructor(
+class BoroughsViewModel @Inject constructor(
 // we need a repository
 ) :ViewModel(){
     private val _state = MutableStateFlow(BoroughsUIState())
