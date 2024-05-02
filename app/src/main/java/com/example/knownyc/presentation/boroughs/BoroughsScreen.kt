@@ -15,7 +15,7 @@ fun BoroughScreen(
 ) {
 
     val viewModel: BoroughsViewModel = hiltViewModel()
-    val state by viewModel.state.collectAsStateWithLifeCycle()
+    val state by viewModel.state.collectAsStateWithLifecycle()
     // We need:
     // - View Model
     // - Page State
