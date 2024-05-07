@@ -1,4 +1,4 @@
-package com.example.knownyc.data.local.repository
+package com.example.knownyc.data.local.repositories
 
 import android.os.Build
 import android.util.Log
