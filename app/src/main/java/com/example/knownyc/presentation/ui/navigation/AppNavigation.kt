@@ -16,26 +16,9 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.knownyc.R
 import com.example.knownyc.presentation.boroughs.BoroughsScreen
+import com.example.knownyc.presentation.parks.NycParksScreen
 import com.example.knownyc.presentation.ui.util.scaffold.AppScaffold
 import com.example.knownyc.presentation.ui.util.scaffold.TitleText
-
-//@Composable
-//fun AppNavigationGraph() {
-//    val navController = rememberNavController()
-//
-//    NavHost(navController = navController, startDestination = Routes.HOME_SCREEN) {
-//        composable(Routes.HOME_SCREEN) {
-//            BoroughScreen(onBoroughClicked = {borough, title ->
-//                // TODO: navigate to Parks Screen
-////                navController.navigate()
-//            })
-//        }
-//
-//        composable(Routes.PARKS_SCREEN) {
-//
-//        }
-//    }
-//}
 
 @Composable
 fun AppNavigationGraph() {
@@ -119,13 +102,12 @@ fun AppNavigationGraph() {
                             type = NavType.StringType
                         },
                     ),
-                ) {
-                    backStackEntry ->
+                ) { backStackEntry ->
                     // TODO: Project 2 add NycParksScreen HERE
-//                    NycParksScreen (
-//                        boroughCode = backStackEntry.arguments?.getString("borough")!!,
-//                        searchText = searchText.value
-//                    )
+                    NycParksScreen (
+                        boroughCode = backStackEntry.arguments?.getString("borough")!!,
+//                        searchText = searchText.value,
+                    )
                 }
             }
         }

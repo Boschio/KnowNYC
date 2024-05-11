@@ -11,7 +11,7 @@ interface NycOpenDataApiService {
     // 'Q' -> Queens
     // 'B' -> Brooklyn
     // 'R' -> Staten Island
-    @GET("enfg-gkve.json")
+    @GET("enfh-gkve.json")
     suspend fun getNycParks(
         @Query("borough") borough: String,
         @Query("retired") retired: Boolean = false,

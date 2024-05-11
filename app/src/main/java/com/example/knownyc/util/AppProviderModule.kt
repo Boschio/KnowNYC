@@ -50,7 +50,7 @@ abstract class AppProviderModule {
             Log.d(TAG, "building NYC Open Data API service provider")
 
             return Retrofit.Builder().addConverterFactory(
-                json.asConverterFactory("application.json".toMediaType())
+                json.asConverterFactory("application/json".toMediaType())
             ).baseUrl(AppConstants.NYC_OPEN_DATA_API_BASE_URL).build()
                 .create(NycOpenDataApiService::class.java)
         }

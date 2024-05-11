@@ -31,7 +31,6 @@ fun BoroughsScreen(
                 painter = painterResource(id = borough.image),
                 contentDescription = borough.longName
             ) {
-                // TODO: navigate to selected Borough
                 Log.d(TAG, "clicked: ${borough.name}")
                 onBoroughClicked(borough.boroCode, borough.name)
             }
