@@ -62,7 +62,7 @@ fun BoroughCard(
                 textAlign = TextAlign.Center,
                 color = MaterialTheme.colorScheme.onBackground,
                 fontWeight = FontWeight.Bold,
-                fontSize = 15.sp,
+                fontSize = 14.sp,
                 modifier = modifier
                     .rotate(-90f)
                     .fillMaxWidth(0.2f)

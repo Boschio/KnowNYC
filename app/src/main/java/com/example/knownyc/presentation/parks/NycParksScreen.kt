@@ -11,8 +11,10 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.example.knownyc.R
 import com.example.knownyc.commons.TAG
 import com.example.knownyc.presentation.ui.util.LoadingDialog
 
@@ -39,8 +41,11 @@ fun NycParksScreen(
     ) {
         items(state.parks) { park ->
             NycParkCard(
-                name = park.name!!
-//                painter = painterResource(id = park.image)!!,
+                name = park.name,
+                location = park.location,
+                parksLogo = painterResource(id = R.drawable.nyc_parks_logo),
+                isWaterfront = park.waterfront,
+//                waterfrontLogo = painterResource(id = R.drawable.waves_24px)
             ) {
                 Log.d(TAG, "clicked: ${park.name}")
                 openUrl(context, park.url)
