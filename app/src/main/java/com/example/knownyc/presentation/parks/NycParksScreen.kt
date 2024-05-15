@@ -45,7 +45,6 @@ fun NycParksScreen(
                 location = park.location,
                 parksLogo = painterResource(id = R.drawable.nyc_parks_logo),
                 isWaterfront = park.waterfront,
-//                waterfrontLogo = painterResource(id = R.drawable.waves_24px)
             ) {
                 Log.d(TAG, "clicked: ${park.name}")
                 openUrl(context, park.url)

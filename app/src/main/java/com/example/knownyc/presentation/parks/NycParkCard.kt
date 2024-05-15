@@ -132,6 +132,6 @@ fun NycParkCardPreview() {
         name = "The Bronxasdfasdfasdfasdfasdfasdfasdf",
         location = "Testing an Address, TESTINGINGINGN",
         parksLogo = painterResource(id = R.drawable.nyc_parks_logo),
-        isWaterfront = true,
+        isWaterfront = false,
     )
 }
